@@ -12,7 +12,6 @@ COPY . .
 RUN npm run build
 
 # Step 2: Production Stage
-# ඉතා සැහැල්ලු Nginx image එකක් පාවිච්චි කරලා build වුණු file ටික serve කරනවා
 FROM nginx:alpine
 
 # Step 1 එකේ build වුණු 'build' folder එක Nginx එකේ default path එකට copy කරනවා
