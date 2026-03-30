@@ -10,7 +10,7 @@
 // export default axiosInstance;
 
 const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://34.123.199.55:8080/api/v1', 
+    baseURL: import.meta.env.VITE_API_URL || 'http://35.224.15.253:8080/api/v1', 
     headers: {
         'Content-Type': 'application/json'
     }
