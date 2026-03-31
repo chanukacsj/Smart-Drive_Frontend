@@ -7,13 +7,11 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# මුළු code එකම copy කරලා build කරනවා
 COPY . .
 RUN npm run build
 
 FROM nginx:alpine
 
-# Step 1 එකේ build වුණු 'build' folder එක Nginx එකේ default path එකට copy කරනවා
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Cloud Run සාමාන්‍යයෙන් 8080 port එක බලාපොරොත්තු වෙන නිසා Nginx configuration එක වෙනස් කරනවා
