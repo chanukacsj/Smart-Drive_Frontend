@@ -11,7 +11,6 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Step 2: Production Stage
 FROM nginx:alpine
 
 # Step 1 එකේ build වුණු 'build' folder එක Nginx එකේ default path එකට copy කරනවා
